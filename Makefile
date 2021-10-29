@@ -9,4 +9,4 @@ format:
 	python -m black *.py
 
 test:
-	python -m pytest --vv -cov=cli test_cli.py
+	python -m pytest -vv -cov=cli test_cli.py
