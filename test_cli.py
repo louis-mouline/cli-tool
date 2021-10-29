@@ -2,7 +2,7 @@ from click.testing import CliRunner
 from cli import search
 
 
-def test_search():
+def test_cli():
     runner = CliRunner()
     result = runner.invoke(search, ("--path", ".", "--ftype", "py"))
     assert result.exit_code == 0

@@ -18,9 +18,12 @@ import click
 def search(path, ftype):
     """Search files with specified type in the specified folder."""
     results = glob.glob(f"{path}/*.{ftype}")
-    click.echo(click.style("Found matches:", fg="red"))
-    for result in results:
-        click.echo(click.style(f"{result}", bg="blue", fg ="white"))
+    if len(results) > 0:
+        click.echo(click.style("Found matches:", fg="green"))
+        for result in results:
+            click.echo(click.style(f"{result}", bg="green", fg ="white"))
+    else:
+        click.echo(click.style(f"No file found in path {path} of type {ftype}", bg="red", fg="white"))
 
 
 if __name__ == '__main__':

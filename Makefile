@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt --user
 
 lint:
-	python -m pylint --disable=R,C cli.py
+	python -m pylint --disable=R,C cli.py test_cli.py app.py
 
 format:
 	python -m black *.py
